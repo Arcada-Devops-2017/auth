@@ -8,4 +8,4 @@ Test Teardown   Close Browser
 *** Test Cases ***
 
 Test string
-    Check for PHP Version in content
+    Check for Hello World! in content
