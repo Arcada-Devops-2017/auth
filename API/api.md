@@ -7,13 +7,15 @@ This document describes the REST endpoints provided by the authentication compon
 
 ## Login
 
-Url: `/login`
+Url: `/login.php`
 
-### Request
+
+
+### Request for login
 
 ```
 {
-    "username": "user",
+    "username": "email",
     "password": "password"
 }
 ```
@@ -28,6 +30,81 @@ HTTP Status code: `200`
 {
     "status": "OK",
     "token": "<token>"
+}
+```
+
+#### Invalid credentials
+
+HTTP Status code: `404`
+```
+{
+    "status": "INVALID_CREDENTIALS"
+}
+```
+
+## Register
+
+Url: `/register.php`
+
+### Request for reqister
+
+```
+{   
+    "first_name" : "firstname"
+    "last_name" : "lastname"
+    "username": "email",
+    "password": "password"
+}
+```
+
+### Responses
+
+
+#### All good
+
+HTTP Status code: `200`
+```
+{
+    "status": "Registered",
+    "token": "<token>"
+}
+```
+
+#### Invalid credentials
+
+HTTP Status code: `404`
+```
+{
+    "status": "INVALID_CREDENTIALS"
+}
+```
+
+## Get user info
+
+Url: `/userinfo.php`
+
+
+
+### Request for user info
+
+```
+{
+    "token": "token"
+}
+```
+
+### Responses
+
+
+#### All good
+
+HTTP Status code: `200`
+```
+{
+    "status": "OK",
+    "first_name : "firstname",
+    "lastname" : "lastname",
+    "username" : "email"
 }
 ```
 
