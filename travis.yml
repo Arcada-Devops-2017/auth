@@ -34,11 +34,11 @@ script: phpunit --configuration phpunit_mysql.xml --coverage-text
 
 before_deploy:
   - openssl aes-256-cbc -K $encrypted_2390d7ff4426_key -iv $encrypted_2390d7ff4426_iv -in auth.enc -out auth -d
-  - chmod 600 stores
+  - chmod 600 auth
 
 deploy:
   - provider: script
     skip_cleanup: true
-    script: ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -tt -i stores ubuntu@auth.arcada.nitor.zone /home/ubuntu/update.sh
+    script: ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -tt -i auth ubuntu@auth.arcada.nitor.zone /home/ubuntu/update.sh
     on:
       branch: master
