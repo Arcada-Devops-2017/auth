@@ -103,7 +103,7 @@ HTTP Status code: `200`
 {
     "status": "OK",
     "first_name : "firstname",
-    "lastname" : "lastname",
+    "last_name" : "lastname",
     "username" : "email"
 }
 ```
