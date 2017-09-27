@@ -50,8 +50,8 @@ Url: `/register.php`
 
 ```
 {   
-    "first_name" : "firstname"
-    "last_name" : "lastname"
+    "first_name" : "firstname",
+    "last_name" : "lastname",
     "username": "email",
     "password": "password"
 }
