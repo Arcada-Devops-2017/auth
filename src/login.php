@@ -38,9 +38,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         echo json_encode($response);
         http_response_code(404);
     }
-} else {
+} /*else {
     $response->status = "INVALID_CREDENTIALS";
     echo json_encode($response);
     http_response_code(404);
-}
+}/*
 ?>
