@@ -42,9 +42,9 @@ class HelloWorldTest extends PHPUnit_Framework_TestCase
         $helloWorld = new HelloWorld();
         $this->assertEquals('Hello Bar', $helloWorld->hello('Bar'));
     }
-     public function testPHP()
+     public function testinkii()
     {
         $testPHP= new testPHP();
-        $this->assertEquals('test PHP', $testPHp->test());
+        $this->assertEquals('test PHP', $testPHP->test());
     }
 }
