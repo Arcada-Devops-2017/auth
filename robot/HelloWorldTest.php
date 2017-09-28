@@ -49,7 +49,7 @@ class HelloWorldTest extends PHPUnit_Framework_TestCase
     }
      public function datatest()
     {
-        $database= new datatest();
+        $database= new database();
         $this->assertEquals('data base', $database->addToken($userID));
     }
 }
