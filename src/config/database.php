@@ -1,5 +1,5 @@
 <?php
-class Database
+class database
 {
  
     private $pdo;
