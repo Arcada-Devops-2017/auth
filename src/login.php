@@ -1,6 +1,8 @@
 <?php
 include_once 'config/database.php';
 
+header("Access-Control-Allow-Origin: *");
+
 $db = new Database();
 //Create databses if not exist
 $db->createDB();
