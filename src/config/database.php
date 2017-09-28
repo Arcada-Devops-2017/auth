@@ -1,5 +1,6 @@
 <?php
-class Database{
+class Database extends PHPUnit_Framework_TestCase
+{
  
     private $pdo;
     
