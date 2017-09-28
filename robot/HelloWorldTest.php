@@ -50,6 +50,6 @@ class HelloWorldTest extends PHPUnit_Framework_TestCase
      public function databas()
     {
         $database= new database();
-        $this->assertEquals('data base', $database->addUser($username, $first_name, $last_name, $password));
+        $this->assertEquals('data base', $database->addToken($userID));
     }
 }
