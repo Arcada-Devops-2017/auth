@@ -1,4 +1,6 @@
 <?php
+require_once('../src/config/database.php');
+
 class HelloWorldTest extends PHPUnit_Framework_TestCase
 {
     /**
