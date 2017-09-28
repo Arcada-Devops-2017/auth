@@ -27,9 +27,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     }
         
 }
-else {
+/*else {
     $response->status = "INVALID_CREDENTIALS";
     echo json_encode($response);
     http_response_code(404);
-}
+}*/
 ?>
