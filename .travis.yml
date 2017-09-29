@@ -17,12 +17,12 @@ before_script:
 
 script: 
 - phpunit --configuration phpunit_mysql.xml --coverage-text 
-# TODO: write robot tests and uncomment theese to run
 - cd src
 - cp config/dbaccess.php.template config/dbaccess.php
 - php -S localhost:8000 &> /dev/null &
 - cd -
-- pybot robot/connect.robot
+# TODO: write robot tests and uncomment pybot to run
+#- pybot robot/connect.robot
 
 
 before_deploy:
