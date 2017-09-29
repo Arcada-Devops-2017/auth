@@ -1,9 +1,9 @@
 *** Settings ***
 Library           Selenium2Library
 Resource          resource.robot
-Suite Setup       Connect To Database    ${dbname}
+Suite Setup       ${dbname}
 
 *** Test Cases ***
 
-Count rows
-    Row Count         select * from ${dbname}
+Connect
+    Connect To Database    ${dbname}
