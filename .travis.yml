@@ -10,6 +10,7 @@ env:
   - DB=mysql
 
 before_script:
+- pip install requests[security]
 - sudo apt-get update && sudo apt-get install -y python python-pip # TODO: SEE BELOW ABOUT ROBOT TESTS#
 - mysql -e 'CREATE DATABASE IF NOT EXISTS auth;'
 - pip install -r robot/requirements.txt # TODO: SEE BELOW ABOUT ROBOT TESTS#
