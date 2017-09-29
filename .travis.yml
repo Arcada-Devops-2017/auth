@@ -11,7 +11,7 @@ env:
 
 before_script:
 # pip install requests[security]
-- pip install -U robotframework-databaselibrary
+- pip install -U robotframework-databaselibrary 
 - sudo apt-get update && sudo apt-get install -y python python-pip # TODO: SEE BELOW ABOUT ROBOT TESTS#
 - mysql -e 'CREATE DATABASE IF NOT EXISTS auth;'
 - sudo pip install -r robot/requirements.txt # TODO: SEE BELOW ABOUT ROBOT TESTS#
