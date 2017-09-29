@@ -22,7 +22,7 @@ script:
 - cp config/dbaccess.php.template config/dbaccess.php
 - php -S localhost:8000 &> /dev/null &
 - cd -
-#- pybot robot/connect.robot
+- pybot robot/connect.robot
 
 
 before_deploy:
