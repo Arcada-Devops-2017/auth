@@ -10,18 +10,18 @@ env:
   - DB=mysql
 
 before_script:
-#- sudo apt-get update && sudo apt-get install -y python python-pip # TODO: SEE BELOW ABOUT ROBOT TESTS
+- sudo apt-get update && sudo apt-get install -y python python-pip # TODO: SEE BELOW ABOUT ROBOT TESTS#
 - mysql -e 'CREATE DATABASE IF NOT EXISTS auth;'
-#- pip install -r robot/requirements.txt # TODO: SEE BELOW ABOUT ROBOT TESTS
+- pip install -r robot/requirements.txt # TODO: SEE BELOW ABOUT ROBOT TESTS#
 
 script: 
 - phpunit --configuration phpunit_mysql.xml --coverage-text 
 # TODO: write robot tests and uncomment theese to run
-#- cd src
-#- cp config/dbaccess.php.template config/dbaccess.php
-#- php -S localhost:8000 &> /dev/null &
-#- cd -
-#- pybot robot/
+- cd src
+- cp config/dbaccess.php.template config/dbaccess.php
+- php -S localhost:8000 &> /dev/null &
+- cd -
+- pybot robot/
 
 
 before_deploy:
