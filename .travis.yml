@@ -19,7 +19,7 @@ before_script:
 - mysql -e 'CREATE DATABASE IF NOT EXISTS travis;'
 - sudo pip install -r robot/requirements.txt # TODO: SEE BELOW ABOUT ROBOT TESTS#
 #TRIED TO SOLVE THE "ACCESS DENIED FOR USER...." PROBLEM.
-- mysql -e "GRANT ALL PRIVILEGES ON *.* TO 'travis'@'127.0.0.1';" -u travis --password="" travis
+- mysql -e "GRANT ALL PRIVILEGES ON *.* TO 'travis'@'127.0.0.1';" -uroot
 
 script: 
 #- phpunit --configuration phpunit_mysql.xml --coverage-text 
@@ -29,7 +29,7 @@ script:
 - cd -
 # TODO: write robot tests and uncomment pybot to run
 - cd robot
-- pybot db_test.robot
+#- pybot db_test.robot
 
 
 before_deploy:
