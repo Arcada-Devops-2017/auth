@@ -7,10 +7,10 @@ Library           OperatingSystem
 
 *** Variables ***
 ${DBHost}         127.0.0.1
-${DBName}         auth
+${DBName}         travis
 ${DBPass}         ""
 ${DBPort}         3306
-${DBUser}         root
+${DBUser}         travis
 
 *** Test Cases ***
 Create Users table
