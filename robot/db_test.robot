@@ -10,7 +10,7 @@ ${DBHost}         127.0.0.1
 ${DBName}         auth
 ${DBPass}         ""
 ${DBPort}         3306
-${DBUser}         travis
+${DBUser}         root
 
 *** Test Cases ***
 Create Users table
