@@ -3,7 +3,7 @@ Library  DatabaseLibrary
 **Testcases**
 TestCase
 
-   Connect To Database Using Custom Params  pymssql  'auth', 'travis', '', 'localhost'
+   Connect To Database Using Custom Params  pymysql  'auth', 'travis', '', 'localhost'
    @{S}  Execute Sql String  CREATE TABLE `UsersTest` (
     `ID` int(10) NOT NULL AUTO_INCREMENT,
     `Username` varchar(256) NOT NULL,
