@@ -25,4 +25,11 @@ Create Users table
     
     Log    ${output}
     Should Be Equal As Strings    ${output}    None
+    
+Execute SQL Script - Insert User
+[Tags]    db    smoke
+Comment    ${output} =    Execute SQL Script    ./${DBName}_createUser.sql
+${output} =    Execute SQL Script    ./auth_createUser.sql
+Log    ${output}
+Should Be Equal As Strings    ${output}    None
 
