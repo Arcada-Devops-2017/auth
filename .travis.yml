@@ -10,7 +10,7 @@ env:
   - DB=mysql
 
 before_script:
-- sudo apt-get update && sudo apt-get install -y python3-pymysql
+- sudo pip install PyMySQL
 - sudo pip install -U robotframework-databaselibrary 
 - sudo apt-get update && sudo apt-get install -y python python-pip # TODO: SEE BELOW ABOUT ROBOT TESTS#
 - mysql -e 'CREATE DATABASE IF NOT EXISTS auth;'
