@@ -9,7 +9,7 @@ Library           DatabaseLibrary
 ${DBHost}         127.0.0.1
 ${DBName}         auth
 ${DBPass}         ""
-${DBPort}         8000
+${DBPort}         3306
 ${DBUser}         travis
 
 *** Test Cases ***
