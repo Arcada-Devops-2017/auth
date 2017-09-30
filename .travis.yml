@@ -23,7 +23,8 @@ script:
 - php -S localhost:8000 &> /dev/null &
 - cd -
 # TODO: write robot tests and uncomment pybot to run
-- pybot robot/db_test.robot
+- cd robot
+- pybot db_test.robot
 
 
 before_deploy:
