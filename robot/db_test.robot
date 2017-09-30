@@ -1,7 +1,7 @@
 
 *** Settings ***
 Suite Setup       Connect To Database    pymysql    ${DBName}    ${DBUser}    ${DBPass}    ${DBHost}    ${DBPort}
-Suite Teardown    Disconnect From Database
+#Suite Teardown    Disconnect From Database
 Library           DatabaseLibrary
 Library           OperatingSystem
 
@@ -14,7 +14,7 @@ ${DBUser}         travis
 
 *** Test Cases ***
 Create Users table
-    ${output} =    Execute SQL String    CREATE TABLE IF NOT EXISTS `UsersTest` (
+    ${output} =    Execute SQL String    CREATE TABLE `UsersTest` (
     `ID` int(10) NOT NULL AUTO_INCREMENT,
     `Username` varchar(256) NOT NULL,
     `FirstName` varchar(256) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
@@ -27,7 +27,6 @@ Create Users table
     Should Be Equal As Strings    ${output}    None
     
 Execute SQL Script - Insert User
-[Tags]    db    smoke
 Comment    ${output} =    Execute SQL Script    ./${DBName}_createUser.sql
 ${output} =    Execute SQL Script    ./auth_createUser.sql
 Log    ${output}
