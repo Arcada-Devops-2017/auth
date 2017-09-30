@@ -13,7 +13,7 @@ before_script:
 - sudo pip install PyMySQL
 - sudo pip install -U robotframework-databaselibrary 
 - sudo apt-get update && sudo apt-get install -y python python-pip # TODO: SEE BELOW ABOUT ROBOT TESTS#
-- mysql -e 'CREATE DATABASE IF NOT EXISTS root;'
+- mysql -e 'CREATE DATABASE IF NOT EXISTS auth;'
 - sudo pip install -r robot/requirements.txt # TODO: SEE BELOW ABOUT ROBOT TESTS#
 - mysql -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'127.0.0.1';" -uroot
 
