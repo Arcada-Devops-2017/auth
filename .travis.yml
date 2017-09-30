@@ -15,6 +15,7 @@ before_script:
 - sudo apt-get update && sudo apt-get install -y python python-pip # TODO: SEE BELOW ABOUT ROBOT TESTS#
 - mysql -e 'CREATE DATABASE IF NOT EXISTS auth;'
 - sudo pip install -r robot/requirements.txt # TODO: SEE BELOW ABOUT ROBOT TESTS#
+- mysql -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'127.0.0.1';" -uroot
 
 script: 
 - phpunit --configuration phpunit_mysql.xml --coverage-text 
