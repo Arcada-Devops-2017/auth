@@ -13,7 +13,6 @@ matrix:
     - env: DB=MySQL
     
 before_script:
-- sudo python setup.py install
 - sudo pip install PyMySQL
 - sudo pip install -U robotframework-databaselibrary 
 - sudo apt-get update && sudo apt-get install -y python python-pip # TODO: SEE BELOW ABOUT ROBOT TESTS#
