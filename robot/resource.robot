@@ -1,5 +1,4 @@
-
-/*
+´´´
 *** Settings ***
 Library     Selenium2Library
 
@@ -14,5 +13,5 @@ Connect To Database
     [Arguments]         ${SERVER}
     Row Count           ${dbname} 
     
-    */
+´´´
 
