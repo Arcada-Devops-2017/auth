@@ -29,7 +29,7 @@ script:
 - cd -
 # TODO: write robot tests and uncomment pybot to run
 - cd robot
-#- pybot db_test.robot
+- pybot db_test.robot
 
 
 before_deploy:
