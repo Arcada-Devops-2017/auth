@@ -13,18 +13,18 @@ matrix:
     - env: DB=MySQL
     
 before_script:
-- sudo pip install PyMySQL
-- sudo pip install -U robotframework-databaselibrary 
+#- sudo pip install PyMySQL
+#- sudo pip install -U robotframework-databaselibrary 
 - sudo apt-get update && sudo apt-get install -y python python-pip # TODO: SEE BELOW ABOUT ROBOT TESTS#
 - mysql -e 'CREATE DATABASE IF NOT EXISTS travis;'
 - sudo pip install -r robot/requirements.txt # TODO: SEE BELOW ABOUT ROBOT TESTS#
 #TRIED TO SOLVE THE "ACCESS DENIED FOR USER...." PROBLEM.
-- mysql -e "GRANT ALL PRIVILEGES ON *.* TO 'travis'@'127.0.0.1';" -uroot
+#- mysql -e "GRANT ALL PRIVILEGES ON *.* TO 'travis'@'127.0.0.1';" -uroot
 
 script: 
 #- phpunit --configuration phpunit_mysql.xml --coverage-text 
-- cd src
-- cp config/dbaccess.php.template config/dbaccess.php
+#- cd src
+#- cp config/dbaccess.php.template config/dbaccess.php
 - php -S localhost:8000 &> /dev/null &
 - cd -
 # TODO: write robot tests and uncomment pybot to run
