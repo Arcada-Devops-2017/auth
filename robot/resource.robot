@@ -1,3 +1,5 @@
+
+/*
 *** Settings ***
 Library     Selenium2Library
 
@@ -10,5 +12,7 @@ ${dbname}         ${SERVER}/dbaccess.php.template
 *** Keywords ***
 Connect To Database
     [Arguments]         ${SERVER}
-    Row Count           ${dbname}
+    Row Count           ${dbname} 
+    
+    */
 
