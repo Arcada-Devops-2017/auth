@@ -30,6 +30,7 @@ script:
 # TODO: write robot tests and uncomment pybot to run
 - cd robot
 - pybot db_test.robot
+- cd -
 
 
 before_deploy:
