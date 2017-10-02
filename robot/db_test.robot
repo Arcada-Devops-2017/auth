@@ -14,6 +14,7 @@ Post Requests
     &{headers} =  Create Dictionary  Content-Type=application/json
     ${resp}=  Post Request  httpbin  /  data=${data}  headers=${headers}
     log to console  ${resp.json()}
-    Dictionary Should Contain Value  ${resp.json()}  firstName
+    ${firstName}=  Get From Dictionary  &{resp.json()}  FirstName
+    Dictionary Should Contain Value  ${firstName}
     
 
