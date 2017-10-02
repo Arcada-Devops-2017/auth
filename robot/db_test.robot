@@ -1,6 +1,7 @@
 *** Settings ***
 Library  Collections
 Library  RequestsLibrary
+Library  requests
 *** Test cases ***
 simpleRequest
     ${result} =  Get Request  http://echo.jsontest.com/framework/robot-framework/api/rest
