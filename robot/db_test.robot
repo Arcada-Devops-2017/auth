@@ -1,7 +1,7 @@
 *** Settings ***
 Library  Collections
 Library  RequestsLibrary
-*** test cases ***
+*** Test cases ***
 simpleRequest
     ${result} =  get  http://echo.jsontest.com/framework/robot-framework/api/rest
     Should Be Equal  ${result.status_code}  ${200}
