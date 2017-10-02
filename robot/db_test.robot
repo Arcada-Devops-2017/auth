@@ -15,6 +15,6 @@ Post Requests
     ${resp}=  Post Request  httpbin  /  data=${data}  headers=${headers}
     log to console  ${resp.json()}
     ${firstName}=  Get From Dictionary  ${resp.json()}  FirstName
-    Dictionary Should Contain Value  ${firstName}
+    Dictionary Should Contain Value  ${firstName}  Niclas
     
 
