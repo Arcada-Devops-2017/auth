@@ -1,9 +1,9 @@
 *** Settings ***
 Library  Collections
-Library  requests
+Library  RequestsLibrary
 *** Test cases ***
 simpleRequest
-    ${result} =  get  http://echo.jsontest.com/framework/robot-framework/api/rest
+    ${result} =  Get Request  http://echo.jsontest.com/framework/robot-framework/api/rest
     Should Be Equal  ${result.status_code}  ${200}
     ${json} =  Set Variable  ${result.json()}
     ${framework} =  Get From Dictionary  ${json}  framework
