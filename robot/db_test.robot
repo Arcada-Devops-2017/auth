@@ -3,14 +3,14 @@ Library  Collections
 Library  RequestsLibrary
 Library  requests
 *** Test cases ***
-simpleRequest
-    ${result} =  Get  http://echo.jsontest.com/framework/robot-framework/api/rest
-    Should Be Equal  ${result.status_code}  ${200}
-    ${json} =  Set Variable  ${result.json()}
-    ${framework} =  Get From Dictionary  ${json}  framework
-    Should Be Equal  ${framework}  robot-framework
-    ${api} =  Get From Dictionary  ${json}  api
-    Should Be Equal  ${api}  rest
+Simple Test
+    Create Session  google  http://www.google.com
+    Create Session  github  https://api.github.com
+    ${resp}=  Get Request  google  /
+    Should Be Equal As Strings  ${resp.status_code}  200
+    ${resp}=  Get Request  github  /users/bulkan
+    Should Be Equal As Strings  ${resp.status_code}  200
+    Dictionary Should Contain Value  ${resp.json()}  Bulkan Evcimen
 
 Post Requests
     Create Session  httpbin  http://auth.arcada.nitor.zone/userinfo.php
