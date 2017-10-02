@@ -14,7 +14,7 @@ simpleRequest
 Post Requests
     Create Session  httpbin  http://auth.arcada.nitor.zone/userinfo.php
     &{data}=  Create Dictionary  token=66518bf3692f2bc197138b394f0af50e
-    &{headers}=  Create Dictionary  Content-Type=application/x-www-form-urlencoded
-    ${resp}=  Post Request  httpbin  /post  data=${data}  headers=${headers}
+    
+    ${resp}=  Post Request  httpbin  /post  data=${data}
     Dictionary Should Contain Value  ${resp.json()['FirstName']}  Niclas
     
