@@ -16,5 +16,6 @@ Post Requests
     log to console  ${resp.json()}
     ${firstName}=  Get From Dictionary  ${resp.json()}  FirstName
     log to console  ${firstName}
+    ${firstName}  Should Contain  Niclas
     
 
