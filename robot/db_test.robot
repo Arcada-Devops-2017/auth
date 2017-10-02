@@ -10,8 +10,10 @@ Simple Test
 Post Requests
     Create Session  httpbin  http://auth.arcada.nitor.zone/userinfo.php
     &{data}=  Create Dictionary  "token"  "66518bf3692f2bc197138b394f0af50e"
+    log to console  ${data}
     &{headers} =  Create Dictionary  "Content-Type"  "application/json"
     ${resp}=  Post Request  httpbin  /  data=${data}  headers=${headers}
+    log to console  ${resp.json()}
     Dictionary Should Contain Value  ${resp.json()['FirstName']}  Niclas
     
 
