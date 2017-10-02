@@ -16,6 +16,6 @@ Post Requests
     log to console  ${resp.json()}
     ${firstName}=  Get From Dictionary  ${resp.json()}  FirstName
     log to console  ${firstName}
-    Should Be Equal As Strings  ${firstName}  "Niclas"
+    Should Be Equal As Strings  ${firstName}  Niclas
     
 
