@@ -1,4 +1,5 @@
 requests
+robotframework-requests
 robotframework==3.0.2
 robotframework-selenium2library==1.8.0
 selenium==3.5.0
