@@ -4,7 +4,7 @@ Library  RequestsLibrary
 Library  requests
 *** Test cases ***
 simpleRequest
-    ${result} =  Get Request  http://echo.jsontest.com/framework/robot-framework/api/rest
+    ${result} =  Get  http://echo.jsontest.com/framework/robot-framework/api/rest
     Should Be Equal  ${result.status_code}  ${200}
     ${json} =  Set Variable  ${result.json()}
     ${framework} =  Get From Dictionary  ${json}  framework
