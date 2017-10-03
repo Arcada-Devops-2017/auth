@@ -2,16 +2,16 @@
 Library  Collections
 Library  RequestsLibrary
 *** Test cases ***
-Register User Test
-    Create Session  httpbin  http://127.0.0.1/register.php
-    &{data}=  Create Dictionary  first_name=kalle  last_name=testguy  username=email@email.com  password=123
-    log to console  ${data}
-    &{headers} =  Create Dictionary  Content-Type=application/json
-    ${resp}=  Post Request  httpbin  /  data=${data}  headers=${headers}
-    log to console  ${resp.json()}
-    ${status}=  Get From Dictionary  ${resp}  status
-    log to console  ${status}
-    Should Be Equal As Strings  ${status}  Registered
+#Register User Test
+#    Create Session  httpbin  http://127.0.0.1/register.php
+#    &{data}=  Create Dictionary  first_name=kalle  last_name=testguy  username=email@email.com  password=123
+#    log to console  ${data}
+#    &{headers} =  Create Dictionary  Content-Type=application/json
+#    ${resp}=  Post Request  httpbin  /  data=${data}  headers=${headers}
+#    log to console  ${resp.json()}
+#    ${status}=  Get From Dictionary  ${resp}  status
+#    log to console  ${status}
+#    Should Be Equal As Strings  ${status}  Registered
 
 Check Token Test
     Create Session  httpbin  http://auth.arcada.nitor.zone/userinfo.php
@@ -23,5 +23,16 @@ Check Token Test
     ${firstName}=  Get From Dictionary  ${resp.json()}  first_name
     log to console  ${firstName}
     Should Be Equal As Strings  ${firstName}  Niclas
+    
+Check Login Test
+    Create Session  httpbin  http://auth.arcada.nitor.zone/login.php
+    &{data}=  Create Dictionary  username=nicke  password=passwd
+    log to console  ${data}
+    &{headers} =  Create Dictionary  Content-Type=application/json
+    ${resp}=  Post Request  httpbin  /  data=${data}  headers=${headers}
+    log to console  ${resp.json()}
+    ${status}=  Get From Dictionary  ${resp.json()}  status
+    log to console  ${status}
+    Should Be Equal As Strings  ${status}  OK
     
 
