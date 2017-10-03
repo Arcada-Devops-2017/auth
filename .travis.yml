@@ -25,12 +25,13 @@ script:
 #- phpunit --configuration phpunit_mysql.xml --coverage-text 
 - cd src
 - cp config/dbaccess.php.template config/dbaccess.php
-- php -S localhost:8000 &> /dev/null &
+- php -S localhost:8000 &> /serverlog &
 - cd -
 # TODO: write robot tests and uncomment pybot to run
 - cd robot
 - pybot db_test.robot
 - cd -
+- cat src/serverlog
 
 
 before_deploy:
