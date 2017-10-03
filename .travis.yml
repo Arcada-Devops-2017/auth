@@ -44,4 +44,4 @@ deploy:
     skip_cleanup: true
     script: ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -tt -i auth ubuntu@auth.arcada.nitor.zone /home/ubuntu/update.sh
     on:
-      branch: testing
+      branch: master
