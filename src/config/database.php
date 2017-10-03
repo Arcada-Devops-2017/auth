@@ -122,7 +122,12 @@ class database
         $statement->bindValue('userid', $userID);
         $statement->execute();
 
-        $result = $statement->fetch(PDO::FETCH_ASSOC);
+        $result_temp = $statement->fetch(PDO::FETCH_OBJ);
+     
+        $result->status = "OK";
+        $result->first_name = $result_temp->FirstName;
+        $result->last_name = $result_temp->LastName;
+        $result->username = $result_temp->Username;
         if(!empty($result)) {            
             return $result;
         }
