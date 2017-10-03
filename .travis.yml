@@ -9,7 +9,7 @@ services:
 env:
   - DB=mysql
 matrix:
-  allow_failures:
+  allow_failures: 
     - env: DB=MySQL
     
 before_script:
