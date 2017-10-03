@@ -3,7 +3,7 @@ Library  Collections
 Library  RequestsLibrary
 *** Test cases ***
 Register User Test
-Create Session  httpbin  http://localhost:8000
+    Create Session  httpbin  http://localhost:8000
     &{data}=  Create Dictionary  firstName=kalle
     log to console  ${data}
     &{headers} =  Create Dictionary  Content-Type=application/json
