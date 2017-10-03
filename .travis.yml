@@ -25,10 +25,10 @@ before_script:
 
 script: 
 #- phpunit --configuration phpunit_mysql.xml --coverage-text 
-#- cd src
+- cd src
 #- cp config/dbaccess.php.template config/dbaccess.php
 - php -S localhost:8000 &> /dev/null &
-#- cd -
+- cd -
 # TODO: write robot tests and uncomment pybot to run
 - cd robot
 - pybot db_test.robot
