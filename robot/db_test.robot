@@ -8,7 +8,7 @@ Register User Test
     &{data}=  Create Dictionary  first_name=kalle  last_name=testguy  username=email@email.com  password=123
     log to console  ${data}
     &{headers} =  Create Dictionary  Content-Type=application/json
-    ${resp}=  Post Request  httpbin  /register.php  data=${data}  headers=${headers}
+    ${resp}=  Post Request  httpbin  /src/register.php  data=${data}  headers=${headers}
     ${json}=  To Json   ${resp.content}
     log to console  ${json}
     ${status}=  Get From Dictionary  ${json}  status
