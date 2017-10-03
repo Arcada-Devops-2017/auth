@@ -24,8 +24,6 @@ before_script:
 script: 
 #- phpunit --configuration phpunit_mysql.xml --coverage-text 
 - cd src
-- python3 -m http.server &
-- sleep 3
 - cp config/dbaccess.php.template config/dbaccess.php
 - php -S localhost:8000 &> /tmp/serverlog &
 - cd -
