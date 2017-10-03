@@ -3,7 +3,7 @@ Library  Collections
 Library  RequestsLibrary
 *** Test cases ***
 Register User Test
-    Create Session  httpbin  http://localhost:8000/register.php
+    Create Session  httpbin  http://127.0.0.1/register.php
     &{data}=  Create Dictionary  first_name=kalle  last_name=testguy  username=email@email.com  password=123
     log to console  ${data}
     &{headers} =  Create Dictionary  Content-Type=application/json
