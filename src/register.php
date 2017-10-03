@@ -1,6 +1,6 @@
 <?php
-include_once 'config/database.php';
-//header("Access-Control-Allow-Origin: *");
+/*include_once 'config/database.php';
+header("Access-Control-Allow-Origin: *");
 
 $db = new Database();
 //Create databses if not exist
@@ -52,5 +52,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     echo json_encode($response);
     http_response_code(404);
 }
+*/
+$postBody = file_get_contents("php://input");
+$postBody = json_decode($postBody);
+$status = $postBody->status;
+
+echo json_encode($status);
 
 ?>
