@@ -1,5 +1,5 @@
-requests
-robotframework-requests
+requests==2.18.4
+robotframework-requests==0.4.7
 robotframework==3.0.2
 robotframework-selenium2library==1.8.0
 selenium==3.5.0
