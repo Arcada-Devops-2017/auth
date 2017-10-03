@@ -9,7 +9,7 @@ Register User Test
     log to console  ${data}
     &{headers} =  Create Dictionary  Content-Type=application/json
     ${resp}=  Post Request  httpbin  /  data=${data}  headers=${headers}
-    log to console  ${resp.json()}
+    log to console  ${resp}
     ${status}=  Get From Dictionary  ${resp}  status
     log to console  ${status}
     Should Be Equal As Strings  ${status}  Registered
