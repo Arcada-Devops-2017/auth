@@ -16,7 +16,7 @@ Register User Test
     Should Be Equal As Strings  ${status}  Registered
 
 Check Token Test
-    Create Session  httpbin  http://localhost:8000/userinfo.php 
+    Create Session  httpbin  http://auth.arcada.nitor.zone/userinfo.php 
     &{data}=  Create Dictionary  token=66518bf3692f2bc197138b394f0af50e
     log to console  ${data}
     &{headers} =  Create Dictionary  Content-Type=application/json
