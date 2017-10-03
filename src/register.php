@@ -53,10 +53,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     http_response_code(404);
 }
 */
-$postBody = file_get_contents("php://input");
-$postBody = json_decode($postBody);
-$status = $postBody->status;
 
-echo json_encode($status);
+$result->status = "Registered";
+
+echo json_encode($result);
 
 ?>
