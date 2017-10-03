@@ -9,9 +9,9 @@ Register User Test
     &{headers} =  Create Dictionary  Content-Type=application/json
     ${resp}=  Post Request  httpbin  /register.php  data=${data}  headers=${headers}
     log to console  ${resp.json()}
-    ${firstName}=  Get From Dictionary  ${resp.json()}  FirstName
-    log to console  ${firstName}
-    Should Be Equal As Strings  ${firstName}  Niclas
+    ${status}=  Get From Dictionary  ${resp}  status
+    log to console  ${status}
+    Should Be Equal As Strings  ${status}  INVALID_CREDENTIALS
 
 Check Token Test
     Create Session  httpbin  http://auth.arcada.nitor.zone/userinfo.php
