@@ -7,8 +7,8 @@ Register User Test
     Create Session  httpbin  http://localhost:8000/register.php
     &{data}=  Create Dictionary  first_name=kalle  last_name=testguy  username=email@email.com  password=123
     log to console  ${data}
-    &{headers} =  Create Dictionary  Content-Type=application/json
-    ${resp}=  Post Request  httpbin  /  data=${data}  headers=${headers}
+    #&{headers} =  Create Dictionary  Content-Type=application/json
+    ${resp}=  Post Request  httpbin  /  data=${data}  #headers=${headers}
     ${json}=  To Json   ${resp.content}
     log to console  ${json}
     ${status}=  Get From Dictionary  ${json}  status
