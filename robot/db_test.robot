@@ -1,6 +1,7 @@
 *** Settings ***
 Library  Collections
 Library  RequestsLibrary
+Library  Selenium2Library
 *** Test cases ***
 Register User Test
     Create Session  httpbin  http://localhost:8000/register.php
