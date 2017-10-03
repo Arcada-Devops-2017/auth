@@ -20,7 +20,7 @@ Check Token Test
     &{headers} =  Create Dictionary  Content-Type=application/json
     ${resp}=  Post Request  httpbin  /  data=${data}  headers=${headers}
     log to console  ${resp.json()}
-    ${firstName}=  Get From Dictionary  ${resp.json()}  FirstName
+    ${firstName}=  Get From Dictionary  ${resp.json()}  first_name
     log to console  ${firstName}
     Should Be Equal As Strings  ${firstName}  Niclas
     
