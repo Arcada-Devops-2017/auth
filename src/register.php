@@ -2,6 +2,7 @@
 
 include_once 'config/database.php';
 header("Access-Control-Allow-Origin: *");
+header('Content-type:application/json;charset=utf-8');
 $db = new Database();
 //Create databses if not exist
 $db->createDB();
