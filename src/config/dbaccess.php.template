@@ -1,12 +1,10 @@
-	require_once "database.php";
+<?php
+require_once "database.php";
 
-	# Edit these
-	define( 'DB_HOST', 'localhost' );
-	define( 'DB_USER', 'travis');
-	define( 'DB_PASS', '');
-	define( 'DB_NAME', 'travis');
-	define( 'DB_DRIVER', 'mysql');
+$host = "localhost";
+$dbname = "travis";
+$username = "travis";
+$password = "";
 
-
-	# Don't touch this
-	define( 'DB_DSN', DB_DRIVER.":dbname=".DB_NAME.";host=".DB_HOST);
+# Don't touch this
+define(mysql:host='.$host.';dbname='.$dbname.';charset=utf8', $username, $password);
