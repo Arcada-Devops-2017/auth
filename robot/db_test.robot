@@ -9,7 +9,7 @@ Register User Test
     log to console  ${data}
     &{headers} =  Create Dictionary  Content-Type=application/json
     ${resp}=  Post Request  httpbin  /  data=${data}  headers=${headers}
-    log to console  ${resp}
+    log to console  ${resp.content}
     ${json}=  To Json   ${resp.content}
     log to console  ${json}
     ${status}=  Get From Dictionary  ${json}  status
