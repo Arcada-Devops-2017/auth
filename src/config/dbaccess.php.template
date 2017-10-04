@@ -1,10 +1,6 @@
 <?php
-require_once "database.php";
 
 $host = "localhost";
 $dbname = "travis";
 $username = "travis";
 $password = "";
-
-# Don't touch this
-define(mysql:host='.$host.';dbname='.$dbname.';charset=utf8', $username, $password);
