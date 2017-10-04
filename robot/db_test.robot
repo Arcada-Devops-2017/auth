@@ -11,7 +11,6 @@ Register User Test
     ${resp}=  Post Request  httpbin  /  data=${data}  headers=${headers}
     ${json}=  To Json   ${resp.content}
     log to console  ${json}
-    log to console  ${resp.content}
     ${status}=  Get From Dictionary  ${json}  status
     log to console  ${status}
     Should Be Equal As Strings  ${status}  Registered
