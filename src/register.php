@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ERROR | E_PARSE);
 include_once 'config/database.php';
 header("Access-Control-Allow-Origin: *");
 $db = new Database();
